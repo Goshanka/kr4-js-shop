@@ -13,6 +13,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <script src="js/theme.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="js/order.js" defer></script>
+    <script src="js/main.js" defer></script>
     <meta property="og:type" content="website" />
     <meta property="og:title" content="ShopProject" />
     <meta
@@ -47,7 +53,7 @@
               <a class="site-nav__link" href="contacts.html">Контакты</a>
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
+              <a class="site-nav__link" href="cart.html">Корзина (<span data-cart-count>0</span>)</a>
             </li>
             <li class="site-nav__item">
               <a class="site-nav__link" href="contacts.html#feedback">Обратная связь</a>
@@ -71,7 +77,13 @@
         <h1>Оформление заявки</h1>
         <p>Заполните форму, и мы свяжемся с вами для уточнения деталей заказа.</p>
 
-        <form class="order-form" action="#" method="post" novalidate>
+        <div class="order-items" id="order-items" hidden>
+          <h2>Ваш заказ</h2>
+          <ul id="order-items-list"></ul>
+          <p id="order-items-total"></p>
+        </div>
+
+        <form class="order-form" action="#" novalidate>
           <div class="order-form__field">
             <label class="order-form__label" for="order-page-name">Имя</label>
             <input

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Корзина магазина ShopProject."
+    />
+    <title>Корзина — ShopProject</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#1f4d46" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="js/theme.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ShopProject" />
+    <meta
+      property="og:description"
+      content="Интернет-магазин мягкой мебели: диваны на любой вкус."
+    />
+    <meta
+      property="og:image"
+      content="https://goshanka.github.io/kr3-responsive-shop/images/sofa-1.jpg"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+    <header class="site-header" id="top">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">ShopProject</a>
+
+        <nav class="site-nav" aria-label="Основная навигация">
+          <input class="site-nav__checkbox" type="checkbox" id="nav-toggle" aria-label="Показать меню" />
+          <label class="site-nav__toggle" for="nav-toggle" aria-hidden="true"><span class="site-nav__burger"></span>Меню</label>
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="order.html?from=cart">Оформить заявку</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="contacts.html">Контакты</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--active" href="cart.html">Корзина (<span data-cart-count>0</span>)</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="contacts.html#feedback">Обратная связь</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Включить тёмную тему">
+          <span class="theme-toggle__icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <span class="breadcrumbs__current">Корзина</span>
+      </nav>
+
+      <h1 class="page-title">Корзина</h1>
+
+      <section class="section">
+        <p id="cart-empty" hidden>Корзина пуста. <a href="catalog.html">Перейти в каталог</a></p>
+        <ul id="cart-list"></ul>
+
+        <div id="cart-summary" hidden>
+          <form id="promo-form" class="promo-form" novalidate>
+            <label class="order-form__label" for="promo-input">Промокод (попробуйте SOFA10)</label>
+            <input class="order-form__input" id="promo-input" type="text" />
+            <p class="promo-message" id="promo-message" role="status"></p>
+            <button class="button button--secondary" type="submit">Применить</button>
+          </form>
+          <p id="cart-discount"></p>
+          <p id="cart-total"><strong></strong></p>
+          <div class="order-form__actions">
+            <button class="button button--secondary" type="button" id="cart-clear">Очистить корзину</button>
+            <a class="button button--primary" href="order.html?from=cart">Оформить заявку</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 ShopProject. Все права защищены.</p>
+    </footer>
+
+    <a class="back-to-top" href="#top" aria-label="Наверх">&uarr;</a>
+  </body>
+</html>

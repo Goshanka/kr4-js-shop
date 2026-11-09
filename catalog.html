@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <script src="js/theme.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="js/main.js" defer></script>
     <meta property="og:type" content="website" />
     <meta property="og:title" content="ShopProject" />
     <meta
@@ -47,7 +52,7 @@
               <a class="site-nav__link" href="contacts.html">Контакты</a>
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
+              <a class="site-nav__link" href="cart.html">Корзина (<span data-cart-count>0</span>)</a>
             </li>
             <li class="site-nav__item">
               <a class="site-nav__link" href="contacts.html#feedback">Обратная связь</a>
@@ -69,120 +74,39 @@
 
       <h1 class="page-title">Каталог товаров</h1>
 
-      <section class="catalog-layout">
-        <aside class="catalog-filters">
-          <h2>Фильтры</h2>
-
-          <form class="catalog-filters__form" action="#" method="get">
-            <fieldset class="catalog-filters__group">
-              <legend class="catalog-filters__legend">Категория</legend>
-
-              <label class="catalog-filters__label">
-                <input type="checkbox" name="category" value="all" />
-                Все товары
-              </label>
-
-              <label class="catalog-filters__label">
-                <input type="checkbox" name="category" value="popular" />
-                Популярные
-              </label>
-
-              <label class="catalog-filters__label">
-                <input type="checkbox" name="category" value="new" />
-                Новинки
-              </label>
-            </fieldset>
-
-            <fieldset class="catalog-filters__group">
-              <legend class="catalog-filters__legend">Цена</legend>
-
-              <label class="catalog-filters__label" for="price-from">От</label>
-              <input
-                class="catalog-filters__input"
-                id="price-from"
-                name="price-from"
-                type="number"
-                min="0"
-                placeholder="0"
-              />
-
-              <label class="catalog-filters__label" for="price-to">До</label>
-              <input
-                class="catalog-filters__input"
-                id="price-to"
-                name="price-to"
-                type="number"
-                min="0"
-                placeholder="5000"
-              />
-            </fieldset>
-
-            <button class="button button--primary" type="submit">Применить</button>
-          </form>
-        </aside>
-
-        <section class="catalog-products">
-          <h2>Список товаров</h2>
-
-          <div class="products-grid">
-            <article class="product-card">
-              <span class="badge badge--hit">Хит</span>
-              <img class="product-card__image" src="images/sofa-1.jpg"
-                srcset="images/sofa-1-320.jpg 320w, images/sofa-1-480.jpg 480w, images/sofa-1.jpg 640w"
-                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                alt="Диван Amelia" width="640" height="480" loading="lazy" />
-              <h3 class="product-card__title">Диван Amelia</h3>
-              <p class="product-card__description">Бежево-золотистый диван с бархатной обивкой и каретной стяжкой.</p>
-              <p class="product-card__price">Цена: 89 990 руб.</p>
-              <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-            </article>
-
-            <article class="product-card">
-              <img class="product-card__image" src="images/sofa-2.jpg"
-                srcset="images/sofa-2-320.jpg 320w, images/sofa-2-480.jpg 480w, images/sofa-2.jpg 640w"
-                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                alt="Диван Nordic" width="640" height="480" loading="lazy" />
-              <h3 class="product-card__title">Диван Nordic</h3>
-              <p class="product-card__description">Компактный диван в стиле ретро с синей бархатной обивкой.</p>
-              <p class="product-card__price">Цена: 54 990 руб.</p>
-              <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-            </article>
-
-            <article class="product-card">
-              <img class="product-card__image" src="images/sofa-3.jpg"
-                srcset="images/sofa-3-320.jpg 320w, images/sofa-3-480.jpg 480w, images/sofa-3.jpg 640w"
-                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                alt="Диван Chesterfield" width="640" height="480" loading="lazy" />
-              <h3 class="product-card__title">Диван Chesterfield</h3>
-              <p class="product-card__description">Классический диван Честерфилд из фиолетового бархата.</p>
-              <p class="product-card__price">Цена: 72 500 руб.</p>
-              <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-            </article>
-
-            <article class="product-card">
-              <img class="product-card__image" src="images/sofa-4.jpg"
-                srcset="images/sofa-4-320.jpg 320w, images/sofa-4-480.jpg 480w, images/sofa-4.jpg 640w"
-                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                alt="Диван Cozy" width="640" height="480" loading="lazy" />
-              <h3 class="product-card__title">Диван Cozy</h3>
-              <p class="product-card__description">Диван серого цвета с мягкими узорными подушками для уютной гостиной.</p>
-              <p class="product-card__price">Цена: 61 900 руб.</p>
-              <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-            </article>
-
-            <article class="product-card">
-              <img class="product-card__image" src="images/sofa-5.jpg"
-                srcset="images/sofa-5-320.jpg 320w, images/sofa-5-480.jpg 480w, images/sofa-5.jpg 640w"
-                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                alt="Диван Scandi" width="640" height="480" loading="lazy" />
-              <h3 class="product-card__title">Диван Scandi</h3>
-              <p class="product-card__description">Светлый диван в скандинавском стиле с лаконичным дизайном.</p>
-              <p class="product-card__price">Цена: 47 300 руб.</p>
-              <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-            </article>
-          </div>
-        </section>
+      <section class="catalog-controls" aria-label="Поиск, фильтр и сортировка">
+        <div>
+          <label for="search">Поиск по названию</label>
+          <input id="search" type="search" placeholder="Например, Nordic" />
+        </div>
+        <div>
+          <label for="category">Категория</label>
+          <select id="category">
+            <option value="all">Все категории</option>
+            <option value="classic">Классика</option>
+            <option value="scandi">Скандинавский стиль</option>
+            <option value="modern">Современные</option>
+          </select>
+        </div>
+        <div>
+          <label for="sort">Сортировка</label>
+          <select id="sort">
+            <option value="default">По умолчанию</option>
+            <option value="price-asc">Цена: по возрастанию</option>
+            <option value="price-desc">Цена: по убыванию</option>
+            <option value="title">Название: А–Я</option>
+          </select>
+        </div>
       </section>
+
+      <p id="catalog-count" role="status"></p>
+
+      <div class="products-grid" id="catalog-grid"></div>
+
+      <div class="catalog-empty" id="catalog-empty" hidden>
+        <p>По вашему запросу ничего не найдено.</p>
+        <button class="button button--secondary" type="button" id="catalog-reset">Сбросить фильтры</button>
+      </div>
     </main>
 
     <footer class="site-footer">

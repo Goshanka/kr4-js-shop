@@ -7,12 +7,17 @@
       name="description"
       content="Карточка товара магазина ShopProject: описание, характеристики и цена."
     />
-    <title>Диван Amelia — ShopProject</title>
+    <title>Карточка товара — ShopProject</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
     <meta name="theme-color" content="#1f4d46" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <script src="js/theme.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="js/main.js" defer></script>
     <meta property="og:type" content="website" />
     <meta property="og:title" content="ShopProject" />
     <meta
@@ -47,7 +52,7 @@
               <a class="site-nav__link" href="contacts.html">Контакты</a>
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
+              <a class="site-nav__link" href="cart.html">Корзина (<span data-cart-count>0</span>)</a>
             </li>
             <li class="site-nav__item">
               <a class="site-nav__link" href="contacts.html#feedback">Обратная связь</a>
@@ -65,68 +70,13 @@
       <nav class="breadcrumbs" aria-label="Хлебные крошки">
         <a class="breadcrumbs__link" href="index.html">Главная</a>
         <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
-        <span class="breadcrumbs__current">Диван Amelia</span>
+        <span class="breadcrumbs__current" id="product-crumb">Товар</span>
       </nav>
 
-      <section class="section">
-        <article class="product-detail">
-          <img
-            class="product-detail__image"
-            src="images/sofa-1.jpg"
-            srcset="images/sofa-1-320.jpg 320w, images/sofa-1-480.jpg 480w, images/sofa-1.jpg 640w"
-            sizes="(max-width: 767px) 100vw, 420px"
-            alt="Диван Amelia"
-            width="640"
-            height="480"
-          />
-
-          <div class="product-detail__info">
-            <h1 class="product-detail__title">Диван Amelia</h1>
-            <p class="product-detail__description">
-              Бежево-золотистый диван с бархатной обивкой и каретной стяжкой.
-              Мягкие подушки и металлические вставки подчёркивают
-              эффектный, статусный вид модели.
-            </p>
-            <p class="product-detail__price">Цена: 89 990 руб.</p>
-            <a class="button button--primary product-detail__button" href="order.html">
-              Оформить заявку
-            </a>
-          </div>
-        </article>
-
-        <div class="table-wrapper">
-        <table class="product-specs">
-          <caption>Характеристики товара</caption>
-          <thead>
-            <tr>
-              <th scope="col">Параметр</th>
-              <th scope="col">Значение</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Категория</th>
-              <td>Диваны</td>
-            </tr>
-            <tr>
-              <th scope="row">Обивка</th>
-              <td>Бархат</td>
-            </tr>
-            <tr>
-              <th scope="row">Артикул</th>
-              <td>SKU-001</td>
-            </tr>
-            <tr>
-              <th scope="row">Наличие</th>
-              <td>В наличии</td>
-            </tr>
-            <tr>
-              <th scope="row">Гарантия</th>
-              <td>12 месяцев</td>
-            </tr>
-          </tbody>
-        </table>
-        </div>
+      <section class="section" id="product-page">
+        <p id="product-not-found" hidden>Товар не найден. <a href="catalog.html">Вернуться в каталог</a></p>
+        <article class="product-detail" id="product-detail"></article>
+        <div class="table-wrapper" id="product-specs-wrapper"></div>
       </section>
     </main>
 

@@ -14,8 +14,7 @@ try {
   if (savedTheme) {
     root.dataset.theme = savedTheme;
   }
-} catch (error) {
-}
+} catch (error) {}
 
 function updateThemeButton() {
   if (!themeToggle) return;
@@ -23,7 +22,7 @@ function updateThemeButton() {
   themeToggle.setAttribute("aria-pressed", String(isDark));
   themeToggle.setAttribute(
     "aria-label",
-    isDark ? "Включить светлую тему" : "Включить тёмную тему"
+    isDark ? "Включить светлую тему" : "Включить тёмную тему",
   );
 }
 
@@ -34,8 +33,7 @@ if (themeToggle) {
     root.dataset.theme = next;
     try {
       localStorage.setItem("theme", next);
-    } catch (error) {
-    }
+    } catch (error) {}
     updateThemeButton();
   });
 }

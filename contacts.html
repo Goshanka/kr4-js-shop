@@ -23,7 +23,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <script src="js/theme.js" defer></script>
-  </head>
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="js/main.js" defer></script>
+    </head>
   <body>
     <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
     <header class="site-header" id="top">
@@ -47,7 +52,7 @@
               <a class="site-nav__link site-nav__link--active" href="contacts.html">Контакты</a>
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
+              <a class="site-nav__link" href="cart.html">Корзина (<span data-cart-count>0</span>)</a>
             </li>
             <li class="site-nav__item">
               <a class="site-nav__link" href="contacts.html#feedback">Обратная связь</a>
@@ -83,7 +88,7 @@
 
           <div class="contacts-info__feedback" id="feedback">
             <h2>Обратная связь</h2>
-            <form class="order-form feedback-form" action="#" method="post" novalidate>
+            <form class="order-form feedback-form" action="#" novalidate>
               <div class="order-form__field">
                 <label class="order-form__label" for="feedback-name">Имя</label>
                 <input class="order-form__input" id="feedback-name" name="name" type="text" autocomplete="name" required />

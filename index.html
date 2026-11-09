@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopProject — магазин диванов</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ShopProject — магазин диванов" />
+    <meta
+      property="og:description"
+      content="Интернет-магазин мягкой мебели: диваны на любой вкус."
+    />
+    <meta
+      property="og:image"
+      content="https://goshanka.github.io/kr3-responsive-shop/images/sofa-1.jpg"
+    />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#1f4d46" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="js/theme.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+    <header class="site-header" id="top">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">ShopProject</a>
+
+        <nav class="site-nav" aria-label="Основная навигация">
+          <input class="site-nav__checkbox" type="checkbox" id="nav-toggle" aria-label="Показать меню" />
+          <label class="site-nav__toggle" for="nav-toggle" aria-hidden="true"><span class="site-nav__burger"></span>Меню</label>
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--active" href="index.html">Главная</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="order.html">Оформить заявку</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="contacts.html">Контакты</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="contacts.html#feedback">Обратная связь</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Включить тёмную тему">
+          <span class="theme-toggle__icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero">
+        <h1>ShopProject — магазин диванов</h1>
+        <p>
+          Диваны на любой вкус: классика, скандинавский стиль и современные модели. Подберите мебель для своего дома и оставьте заявку онлайн.
+        </p>
+        <a class="button button--primary" href="catalog.html">Перейти к товарам</a>
+      </section>
+
+      <section class="section" id="popular">
+        <h2>Популярные товары</h2>
+
+        <div class="products-grid">
+          <article class="product-card">
+            <span class="badge badge--hit">Хит</span>
+            <img class="product-card__image" src="images/sofa-1.jpg"
+                srcset="images/sofa-1-320.jpg 320w, images/sofa-1-480.jpg 480w, images/sofa-1.jpg 640w"
+                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                alt="Диван Amelia" width="640" height="480" loading="lazy" />
+            <h3 class="product-card__title">Диван Amelia</h3>
+            <p class="product-card__description">Бежево-золотистый диван с бархатной обивкой и каретной стяжкой.</p>
+            <p class="product-card__price">Цена: 89 990 руб.</p>
+            <div class="product-card__actions">
+              <a class="button button--secondary product-card__link" href="product.html">Подробнее</a>
+              <button
+                class="button button--primary product-card__button"
+                type="button"
+                data-product="Диван Amelia"
+              >
+                Заказать
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img class="product-card__image" src="images/sofa-2.jpg"
+                srcset="images/sofa-2-320.jpg 320w, images/sofa-2-480.jpg 480w, images/sofa-2.jpg 640w"
+                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                alt="Диван Nordic" width="640" height="480" loading="lazy" />
+            <h3 class="product-card__title">Диван Nordic</h3>
+            <p class="product-card__description">Компактный диван в стиле ретро с синей бархатной обивкой.</p>
+            <p class="product-card__price">Цена: 54 990 руб.</p>
+            <div class="product-card__actions">
+              <a class="button button--secondary product-card__link" href="product.html">Подробнее</a>
+              <button
+                class="button button--primary product-card__button"
+                type="button"
+                data-product="Диван Nordic"
+              >
+                Заказать
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img class="product-card__image" src="images/sofa-3.jpg"
+                srcset="images/sofa-3-320.jpg 320w, images/sofa-3-480.jpg 480w, images/sofa-3.jpg 640w"
+                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                alt="Диван Chesterfield" width="640" height="480" loading="lazy" />
+            <h3 class="product-card__title">Диван Chesterfield</h3>
+            <p class="product-card__description">Классический диван Честерфилд из фиолетового бархата.</p>
+            <p class="product-card__price">Цена: 72 500 руб.</p>
+            <div class="product-card__actions">
+              <a class="button button--secondary product-card__link" href="product.html">Подробнее</a>
+              <button
+                class="button button--primary product-card__button"
+                type="button"
+                data-product="Диван Chesterfield"
+              >
+                Заказать
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="advantages">
+        <h2>Почему выбирают нас</h2>
+
+        <div class="advantages-list">
+          <article class="advantage">
+            <span class="advantage__num" aria-hidden="true">1</span>
+            <h3 class="advantage__title">Бесплатная доставка</h3>
+            <p class="advantage__text">По городу привезём и занесём диван в удобное для вас время.</p>
+          </article>
+          <article class="advantage">
+            <span class="advantage__num" aria-hidden="true">2</span>
+            <h3 class="advantage__title">Гарантия 12 месяцев</h3>
+            <p class="advantage__text">На каркас и механизмы всех моделей из каталога.</p>
+          </article>
+          <article class="advantage">
+            <span class="advantage__num" aria-hidden="true">3</span>
+            <h3 class="advantage__title">Прочные ткани</h3>
+            <p class="advantage__text">Бархат и другие износостойкие обивки, приятные на ощупь.</p>
+          </article>
+          <article class="advantage">
+            <span class="advantage__num" aria-hidden="true">4</span>
+            <h3 class="advantage__title">Сборка в подарок</h3>
+            <p class="advantage__text">Соберём мебель на месте и поможем с подъёмом на этаж.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contacts">
+      <p>&copy; 2026 ShopProject. Все права защищены.</p>
+    </footer>
+    <dialog
+      class="order-dialog"
+      id="order-dialog"
+      aria-labelledby="order-dialog-title"
+    >
+      <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+
+      <form
+        class="order-form"
+        id="order-form"
+        action="#"
+        method="post"
+        novalidate
+      >
+        <input id="selected-product" name="selected-product" type="hidden" />
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-name">Имя</label>
+          <input
+            class="order-form__input"
+            id="order-name"
+            name="name"
+            type="text"
+            placeholder="Введите ваше имя"
+            minlength="2"
+            autocomplete="given-name"
+            required
+          />
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-email">E-mail</label>
+          <input
+            class="order-form__input"
+            id="order-email"
+            name="email"
+            type="email"
+            placeholder="example@mail.ru"
+            autocomplete="email"
+            required
+          />
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-phone">Телефон</label>
+          <input
+            class="order-form__input"
+            id="order-phone"
+            name="phone"
+            type="tel"
+            inputmode="tel"
+            placeholder="+7 (900) 000-00-00"
+            pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+            required
+          />
+          <small class="order-form__hint">Формат: +7 (900) 000-00-00</small>
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-date">Дата связи</label>
+          <input class="order-form__input" id="order-date" name="date" type="date" />
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-topic">Тема заявки</label>
+          <select class="order-form__select" id="order-topic" name="topic" required>
+            <option value="">Выберите тему</option>
+            <option value="product">Заказ товара</option>
+            <option value="consultation">Консультация</option>
+            <option value="delivery">Доставка</option>
+          </select>
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-comment">Комментарий</label>
+          <textarea
+            class="order-form__textarea"
+            id="order-comment"
+            name="comment"
+            rows="4"
+            placeholder="Укажите дополнительную информацию"
+          ></textarea>
+        </div>
+
+        <div class="order-form__field order-form__field--checkbox">
+          <label>
+            <input
+              class="order-form__checkbox"
+              id="order-agreement"
+              name="agreement"
+              type="checkbox"
+              required
+            />
+            Я согласен на обработку данных
+          </label>
+        </div>
+
+        <div class="order-form__actions">
+          <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+          <button class="button button--primary" type="submit">Отправить заявку</button>
+        </div>
+      </form>
+    </dialog>
+
+    <p class="success-message" id="success-message" hidden>
+      Форма успешно отправлена!
+    </p>
+
+    <a class="back-to-top" href="#top" aria-label="Наверх">&uarr;</a>
+  </body>
+</html>

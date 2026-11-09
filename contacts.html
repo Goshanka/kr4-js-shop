@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Контактная информация магазина ShopProject."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ShopProject" />
+    <meta
+      property="og:description"
+      content="Интернет-магазин мягкой мебели: диваны на любой вкус."
+    />
+    <meta
+      property="og:image"
+      content="https://goshanka.github.io/kr3-responsive-shop/images/sofa-1.jpg"
+    />
+    <title>Контакты — ShopProject</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#1f4d46" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="js/theme.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+    <header class="site-header" id="top">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">ShopProject</a>
+
+        <nav class="site-nav" aria-label="Основная навигация">
+          <input class="site-nav__checkbox" type="checkbox" id="nav-toggle" aria-label="Показать меню" />
+          <label class="site-nav__toggle" for="nav-toggle" aria-hidden="true"><span class="site-nav__burger"></span>Меню</label>
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="order.html">Оформить заявку</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--active" href="contacts.html">Контакты</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="contacts.html#feedback">Обратная связь</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Включить тёмную тему">
+          <span class="theme-toggle__icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <span class="breadcrumbs__current">Контакты</span>
+      </nav>
+
+      <section class="section">
+        <h1>Контакты</h1>
+
+        <div class="contacts-info">
+          <p>
+            Свяжитесь с нами любым удобным способом.
+          </p>
+
+          <ul>
+            <li>Телефон: +7 (900) 000-00-00</li>
+            <li>E-mail: info@example.com</li>
+            <li>Адрес: г. Москва</li>
+          </ul>
+
+          <div class="contacts-info__feedback" id="feedback">
+            <h2>Обратная связь</h2>
+            <form class="order-form feedback-form" action="#" method="post" novalidate>
+              <div class="order-form__field">
+                <label class="order-form__label" for="feedback-name">Имя</label>
+                <input class="order-form__input" id="feedback-name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="order-form__field">
+                <label class="order-form__label" for="feedback-email">E-mail</label>
+                <input class="order-form__input" id="feedback-email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="order-form__field order-form__field--wide">
+                <label class="order-form__label" for="feedback-message">Сообщение</label>
+                <textarea class="order-form__textarea" id="feedback-message" name="message" rows="4" required></textarea>
+              </div>
+              <div class="order-form__actions">
+                <button class="button button--primary" type="submit">Отправить</button>
+                <a class="button button--secondary" href="order.html">Оформить заявку</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <iframe
+          class="map__frame"
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A4dab76164c59ad511e93f0fb560ec34196f6ba5aa5633a742b21ece738b68f43&amp;source=constructor"
+          width="500"
+          height="400"
+          frameborder="0"
+          title="Карта с расположением магазина"
+          loading="lazy"
+        ></iframe>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 ShopProject. Все права защищены.</p>
+    </footer>
+
+    <a class="back-to-top" href="#top" aria-label="Наверх">&uarr;</a>
+  </body>
+</html>
